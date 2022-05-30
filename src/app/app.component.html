@@ -273,7 +273,7 @@ $(document).ready(function(){
 						<h2>Post <b>App</b></h2>
 					</div>
 					<div class="col-sm-6">
-						<a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Add New Employee</span></a>
+						<a href="#addModalForm" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Add New Post</span></a>
 					</div>
 				</div>
 			</div>
@@ -294,7 +294,7 @@ $(document).ready(function(){
 						<td>{{post.title}}</td>
 						<td>{{post.body}}</td>
 						<td>
-							<a href="#editEmployeeModal" (click)="editModal(post)" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+							<a href="#editModalForm" (click)="editModal(post)" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
 							<a href="#"(click)="deletePost(post)" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
 						</td>
 					</tr>
@@ -305,7 +305,7 @@ $(document).ready(function(){
 	</div>        
 </div>
 <!-- Add Modal HTML -->
-<div id="addEmployeeModal" class="modal fade">
+<div id="addModalForm" class="modal fade">
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<form [formGroup] = "formValue" >
@@ -338,7 +338,7 @@ $(document).ready(function(){
 	</div>
 </div>
 <!-- Edit Modal HTML -->
-<div id="editEmployeeModal" class="modal fade">
+<div id="editModalForm" class="modal fade">
 	<div class="modal-dialog">
 		<div class="modal-content" *ngIf="editPostModal">
 			<form>
